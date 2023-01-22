@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Switch
+        android:id="@+id/opportunityFire"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infantryModifiersTitle" />
+
+    <TextView
+        android:id="@+id/opportunityFireText"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="@string/oppotunity_fire"
+        android:textColor="#960505"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/opportunityFire"
+        app:layout_constraintStart_toEndOf="@+id/opportunityFire"
+        app:layout_constraintTop_toTopOf="@+id/opportunityFire" />
+
+    <Switch
+        android:id="@+id/coalitionFiring"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="@+id/storm"
+        app:layout_constraintTop_toBottomOf="@+id/storm" />
+
+    <TextView
+        android:id="@+id/coalitionFiringText"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="@string/coalition_firing_at_least_at_3_or_4_hexes"
+        android:textColor="#960505"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/coalitionFiring"
+        app:layout_constraintStart_toEndOf="@+id/coalitionFiring"
+        app:layout_constraintTop_toTopOf="@+id/coalitionFiring" />
+
+
+    <Switch
+        android:id="@+id/storm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/opportunityFire"
+        app:layout_constraintTop_toBottomOf="@+id/unitInDefenceOrder" />
+
+    <TextView
+        android:id="@+id/stormText"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="@string/storm_except_for_adjacent_target"
+        android:textColor="#960505"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/storm"
+        app:layout_constraintStart_toEndOf="@+id/storm"
+        app:layout_constraintTop_toTopOf="@+id/storm" />
+
+
+    <Switch
+        android:id="@+id/unitInDefenceOrder"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/opportunityFire"
+        app:layout_constraintTop_toBottomOf="@+id/artilleryModifiersText" />
+
+    <TextView
+        android:id="@+id/unitInDefenceOrderText"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:text="@string/clear_terrain_hex_with_a_lead_infantry_unit_in_defence_order"
+        android:textSize="12sp"
+        android:textColor="#960505"
+        app:layout_constraintBottom_toBottomOf="@+id/unitInDefenceOrder"
+        app:layout_constraintStart_toEndOf="@+id/unitInDefenceOrder"
+        app:layout_constraintTop_toTopOf="@+id/unitInDefenceOrder" />
+
+
+    <Switch
+        android:id="@+id/mud"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/centerGuideline"
+        app:layout_constraintTop_toTopOf="@+id/unitInDefenceOrder" />
+
+    <TextView
+        android:id="@+id/mudText"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="@string/mud_except_for_adjacent_target"
+        android:textSize="12sp"
+        android:textColor="#960505"
+        app:layout_constraintBottom_toBottomOf="@+id/mud"
+        app:layout_constraintStart_toEndOf="@+id/mud"
+        app:layout_constraintTop_toTopOf="@+id/mud" />
+
+    <Switch
+        android:id="@+id/artilleryAlongInTheHex"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="@+id/opportunityFire"
+        app:layout_constraintTop_toBottomOf="@+id/opportunityFire" />
+
+    <TextView
+        android:id="@+id/artilleryAlongInTheHexText"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="@string/versus_artillery_along_in_the_hex"
+        android:textSize="12sp"
+        android:textColor="#960505"
+        app:layout_constraintBottom_toBottomOf="@+id/artilleryAlongInTheHex"
+        app:layout_constraintStart_toEndOf="@+id/artilleryAlongInTheHex"
+        app:layout_constraintTop_toTopOf="@+id/artilleryAlongInTheHex" />
+
+    <ru.serge.austerlitz.items_selector.ItemSelector
+        android:id="@+id/terrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/centerGuideline"
+        app:layout_constraintTop_toTopOf="@+id/opportunityFire" />
+
+    <ru.serge.austerlitz.items_selector.ItemSelector
+        android:id="@+id/distance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/centerGuideline"
+        app:layout_constraintTop_toTopOf="@+id/storm" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centerGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ru.serge.austerlitz.counters.ActivatedUnitListView
+        android:id="@+id/activatedAttackerList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:background="#C9C1C1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/coalitionFiringText" />
+
+    <ru.serge.austerlitz.counters.UnitListView
+        android:id="@+id/infantry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activatedAttackerList" />
+
+    <ru.serge.austerlitz.counters.UnitListView
+        android:id="@+id/light_infantry"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/infantry" />
+
+    <ru.serge.austerlitz.counters.UnitListView
+        android:id="@+id/artillery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/light_infantry" />
+
+    <ru.serge.austerlitz.counters.UnitListView
+        android:id="@+id/mountedArtillery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/artillery" />
+
+    <ru.serge.austerlitz.items_selector.ItemSelectorSimpleHorizontal
+        android:id="@+id/diceRoll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mountedArtillery" />
+
+    <Button
+        android:id="@+id/calculateBtn"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/fire"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/centerGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/diceRoll" />
+
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        app:layout_constraintEnd_toStartOf="@+id/centerGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/calculateBtn" />
+
+    <TextView
+        android:id="@+id/infantryModifiersTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/common_modifiers"
+        android:textColor="#283593"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/marckscript_regular"
+        app:fontFamily="@font/marckscript_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/artilleryModifiersText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:fontFamily="@font/marckscript_regular"
+        android:text="@string/artillery_modifiers"
+        android:textColor="#283593"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/marckscript_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/artilleryAlongInTheHex" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

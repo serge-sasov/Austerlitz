@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/side"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/marckscript_regular"
+            android:text="Attacker"
+            android:textAlignment="center"
+            android:textColor="#4527A0"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:fontFamily="@font/marckscript_regular" />
+
+        <LinearLayout
+            android:id="@+id/qft"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal"
+            android:visibility="visible">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/quality_factor_check" />
+
+            <TextView
+                android:id="@+id/qftValue"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="5"
+                android:text="QFT + 1"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <LinearLayout
+        android:id="@+id/reduceStockingUnits"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="@string/reduce_stoking_units" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="5"
+            android:text="@string/one_step"
+            android:textStyle="bold" />
+    </LinearLayout>
+        <LinearLayout
+            android:id="@+id/stepLose"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:text="@string/step_lose" />
+
+            <TextView
+                android:id="@+id/stepLoseValue"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="5"
+                android:text="@string/_1_step_lose"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/eliminated"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/if_defending_stock_is_in_clear_terrain_not_in_defence_order_it_is_automatically_eliminated"
+            android:textColor="#A80606"
+            android:textSize="16sp"
+            android:fontFamily="@font/marckscript_regular"
+            app:fontFamily="@font/marckscript_regular"
+            android:textStyle="bold" />
+    </LinearLayout>
+</merge>

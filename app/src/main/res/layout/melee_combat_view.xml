@@ -1,0 +1,348 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Switch
+        android:id="@+id/cavalryUnpreparedAttack"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attackingUnitModifiers" />
+
+    <TextView
+        android:id="@+id/cavalryUnpreparedAttackText"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="@string/cavalry_unprepared_attack"
+        android:textColor="#08114B"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/cavalryUnpreparedAttack"
+        app:layout_constraintStart_toEndOf="@+id/cavalryUnpreparedAttack"
+        app:layout_constraintTop_toTopOf="@+id/cavalryUnpreparedAttack" />
+
+    <Switch
+        android:id="@+id/fatiguedDefendingCavalry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/centerGuideline"
+        app:layout_constraintTop_toTopOf="@+id/mixingDefenderFormationPenalty" />
+
+    <TextView
+        android:id="@+id/fatiguedDefendingCavalryText"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="@string/fatigued_defending_cavalry"
+        android:textColor="#073731"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fatiguedDefendingCavalry"
+        app:layout_constraintStart_toEndOf="@+id/fatiguedDefendingCavalry"
+        app:layout_constraintTop_toTopOf="@+id/fatiguedDefendingCavalry" />
+
+
+    <Switch
+        android:id="@+id/encircledDefender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/cavalryUnpreparedAttack"
+        app:layout_constraintTop_toBottomOf="@+id/defendingUnitModifiersText" />
+
+    <TextView
+        android:id="@+id/encircledDefenderText"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/encircled_defender"
+        android:textColor="#073731"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/encircledDefender"
+        app:layout_constraintStart_toEndOf="@+id/encircledDefender"
+        app:layout_constraintTop_toTopOf="@+id/encircledDefender" />
+
+
+    <Switch
+        android:id="@+id/mixingDefenderFormationPenalty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        app:layout_constraintStart_toStartOf="@+id/encircledDefender"
+        app:layout_constraintTop_toBottomOf="@+id/encircledDefender" />
+
+    <TextView
+        android:id="@+id/mixingDefenderFormationPenaltyText"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="@string/mixing_defenders_s_formation_penalty"
+        android:textSize="12sp"
+        android:textColor="#073731"
+        app:layout_constraintBottom_toBottomOf="@+id/mixingDefenderFormationPenalty"
+        app:layout_constraintStart_toEndOf="@+id/mixingDefenderFormationPenalty"
+        app:layout_constraintTop_toTopOf="@+id/mixingDefenderFormationPenalty" />
+
+
+    <Switch
+        android:id="@+id/mixingAttackerFormationPenalty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="@+id/cavalryUnpreparedAttack"
+        app:layout_constraintTop_toBottomOf="@+id/cavalryUnpreparedAttack" />
+
+    <TextView
+        android:id="@+id/mixingAttackerFormationPenaltyText"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:text="@string/mixing_attaker_s_formation_penalty"
+        android:textColor="#08114B"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="@+id/mixingAttackerFormationPenalty"
+        app:layout_constraintStart_toEndOf="@+id/mixingAttackerFormationPenalty"
+        app:layout_constraintTop_toTopOf="@+id/mixingAttackerFormationPenalty" />
+
+
+    <Switch
+        android:id="@+id/attackVersusRootedUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/centerGuideline"
+        app:layout_constraintTop_toTopOf="@+id/encircledDefender" />
+
+    <TextView
+        android:id="@+id/attackVersusRootedUnitText"
+        android:layout_width="130dp"
+        android:layout_height="wrap_content"
+        android:text="@string/attack_versus_a_stock_containing_at_least_one_routed_unit"
+        android:textSize="12sp"
+        android:textColor="#073731"
+        app:layout_constraintBottom_toBottomOf="@+id/attackVersusRootedUnit"
+        app:layout_constraintStart_toEndOf="@+id/attackVersusRootedUnit"
+        app:layout_constraintTop_toTopOf="@+id/attackVersusRootedUnit" />
+
+    <Switch
+        android:id="@+id/attackWithDemorizedUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@+id/centerGuideline"
+        app:layout_constraintTop_toTopOf="@+id/cavalryUnpreparedAttack" />
+
+    <TextView
+        android:id="@+id/attackWithDemorizedUnitText"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="@string/attack_with_a_demoralized_lead_unit"
+        android:textSize="12sp"
+        android:textColor="#08114B"
+        app:layout_constraintBottom_toBottomOf="@+id/attackWithDemorizedUnit"
+        app:layout_constraintStart_toEndOf="@+id/attackWithDemorizedUnit"
+        app:layout_constraintTop_toTopOf="@+id/attackWithDemorizedUnit" />
+
+
+    <ru.serge.austerlitz.items_selector.ItemSelector
+        android:id="@+id/terrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:gravity="center"
+        app:layout_constraintEnd_toStartOf="@+id/centerGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mixingAttackerFormationPenalty" />
+
+    <ru.serge.austerlitz.items_selector.ItemSelector
+        android:id="@+id/troopQuality"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/centerGuideline"
+        app:layout_constraintTop_toTopOf="@+id/terrain" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/centerGuideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ru.serge.austerlitz.counters.ActivatedUnitListView
+        android:id="@+id/activatedAttackerList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#C9C1C1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frontAttackingUnitsText" />
+
+    <ru.serge.austerlitz.counters.UnitListView
+        android:id="@+id/attackerInfantry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activatedAttackerList" />
+
+    <ru.serge.austerlitz.counters.UnitListView
+        android:id="@+id/attackerCavalry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attackerInfantry" />
+
+    <ru.serge.austerlitz.counters.ActivatedUnitListView
+        android:id="@+id/activatedAttackerFlankList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="#C9C1C1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flankCavalryAttackText" />
+
+    <ru.serge.austerlitz.counters.UnitListView
+        android:id="@+id/attackerCavalryFlank"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activatedAttackerFlankList" />
+
+    <ru.serge.austerlitz.counters.ActivatedUnitListView
+        android:id="@+id/activatedDefenderList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="#C9C1C1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/defendingUnitText" />
+
+    <ru.serge.austerlitz.counters.UnitListView
+        android:id="@+id/defenderInfantry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/activatedDefenderList" />
+
+    <ru.serge.austerlitz.counters.UnitListView
+        android:id="@+id/defenderCavalry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/defenderInfantry" />
+
+    <ru.serge.austerlitz.items_selector.ItemSelectorSimpleHorizontal
+        android:id="@+id/diceRoll"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/defenderCavalry" />
+
+    <Button
+        android:id="@+id/calculateBtn"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="40dp"
+        android:text="@string/melee"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/centerGuideline"
+        app:layout_constraintTop_toBottomOf="@+id/diceRoll" />
+
+    <Button
+        android:id="@+id/clearBtn"
+        android:layout_width="150sp"
+        android:layout_height="wrap_content"
+        android:text="@string/clear"
+        app:layout_constraintEnd_toStartOf="@+id/centerGuideline"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/calculateBtn" />
+
+    <TextView
+        android:id="@+id/attackingUnitModifiers"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="@string/attacking_unit_modifiers"
+        android:textColor="#DD0C0C"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:fontFamily="@font/marckscript_regular"
+        app:fontFamily="@font/marckscript_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/frontAttackingUnitsText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/marckscript_regular"
+        android:text="@string/front_attacking_units"
+        android:textColor="#DD0C0C"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/marckscript_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/terrain" />
+
+    <TextView
+        android:id="@+id/flankCavalryAttackText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:fontFamily="@font/marckscript_regular"
+        android:text="@string/flank_attacking_cavalry_units"
+        android:textColor="#DD0C0C"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/marckscript_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attackerCavalry" />
+
+    <TextView
+        android:id="@+id/defendingUnitModifiersText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/marckscript_regular"
+        android:text="@string/defending_unit_modifiers"
+        android:textColor="#00695C"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/marckscript_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/attackerCavalryFlank" />
+
+    <TextView
+        android:id="@+id/defendingUnitText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:fontFamily="@font/marckscript_regular"
+        android:text="@string/defending_units"
+        android:textColor="#00695C"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:fontFamily="@font/marckscript_regular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.499"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/mixingDefenderFormationPenaltyText" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
